@@ -1,0 +1,125 @@
+$color-primary-dark:#0072ff;
+$color-primary-light:#00c6ff;
+$color-white:#fff;
+$color-black:#000;
+
+body{
+    margin:0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgba($color-white,.9),rgba($color-white,.9)),url(../img/map-of-the-world-2401458_1280.jpg) fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    animation:bg-animate 5s infinite;
+    -webkit-animation:bg-animate 5s infinite;
+}
+
+.header{
+    
+
+    &__heading{
+        font-size: 2rem;
+        font-family: 'Luckiest Guy','Times New Roman', Times, serif;
+        text-align: center;
+        background: #fff;
+        border-bottom: 3px solid $color-primary-dark;
+        border-top: 3px solid $color-primary-dark;
+        
+        /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, $color-primary-dark, $color-primary-light);
+        /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+        -webkit-background-clip: text;
+        color: transparent;
+       
+        letter-spacing: 0.2rem;
+    }
+}
+.login-box{
+    
+    padding: 4rem 3rem;
+    background: rgba($color-white,.2);
+    box-shadow: .5rem 2rem 4rem rgba($color-black,.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    &__img{
+        margin:1rem;
+    }
+    &__input{
+        display: block;
+        width: 15rem;
+        height: 2rem;
+        margin-top:1rem;
+        border: none;
+        padding: 0 0.5rem;
+        box-shadow: .5rem 1rem 4rem rgba(#000,.2);
+        
+        &:focus{
+            border-bottom:2px solid $color-primary-light;
+        }
+    }
+    &__btn{
+        background: #00c6ff;
+        /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, $color-primary-dark, $color-primary-light);
+        /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+        /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/color:$color-white;
+        letter-spacing: .1rem;
+        width: 100%;
+        height: 2rem;
+        padding: 0 0.5rem;
+        margin-top:1.5rem;
+        border:none;
+        transition:all .2s;
+        -webkit-transition:all .2s;
+        -moz-transition:all .2s;
+        -ms-transition:all .2s;
+        -o-transition:all .2s;
+        &:hover{
+            transform:translateY(-.2rem);
+            letter-spacing: .2rem;
+            box-shadow: .5rem 1rem 4rem rgba($color-black,.2);
+            -webkit-transform:translateY(-.2rem);
+            -moz-transform:translateY(-.2rem);
+            -ms-transform:translateY(-.2rem);
+            -o-transform:translateY(-.2rem);
+        }
+        &:active{
+            transform:translateY(0rem);
+            letter-spacing: .2rem;
+            box-shadow: none;
+            -webkit-transform:translateY(0rem);
+            -moz-transform:translateY(0rem);
+            -ms-transform:translateY(0rem);
+            -o-transform:translateY(0rem);
+}
+    }
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    
+}
+
+#error{
+    text-align: center;
+    padding: 1rem;
+    color:red;
+  }
+
+
+@keyframes bg-animate{
+    0%{
+        background-size: 100% 100%;
+    }
+    50%{
+        background-size: 100% 110%;
+    }
+    100%{
+        background-size: 100% 100%;
+    }
+    
+}

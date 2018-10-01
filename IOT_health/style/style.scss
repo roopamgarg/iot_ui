@@ -1,0 +1,253 @@
+$bp-tab:992px;
+$color-primary-light:#56CCF2;
+$color-primary-dark:#2F80ED;
+body{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    
+    background: url('../../img/map-of-the-world-2401458_1280.jpg') fixed no-repeat;
+    background-size: cover;
+    animation:bg-animate 5s infinite;
+    -webkit-animation:bg-animate 5s infinite;
+}
+
+
+
+.container{
+    display:flex;
+    height: 100vh;
+ 
+    @media(max-width:$bp-tab)   
+{
+        display:block
+    }
+}
+
+.header{
+
+    font-family: 'times new roman', cursive;
+    //font-family: 'Libre Baskerville', serif;
+    font-size: 1rem;
+
+    width: 35vw;
+    height: 100vh;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(#2F80ED,.9),rgba( #56CCF2,.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      box-shadow: 2rem 0 4rem rgba(#000,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    font-weight: 100;
+    h1,h2{
+        text-transform: uppercase;
+        font-family: 'Luckiest Guy', cursive;
+    letter-spacing: .2rem;
+    }
+    @media (max-width:$bp-tab) {
+        width:100vw;
+        min-height: 40vh;
+    }
+    &__heading{
+        width: 100%;
+        text-align: center;
+        font-weight: 900;
+        border-bottom: 2px solid #fff;
+        border-top: 2px solid #fff;
+       padding: .5rem 0;
+    }
+}
+
+.map_container{
+    background: rgba(#fff,.9);
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes bg-animate{
+    0%{
+        background-size: 100% 100%;
+}
+    50%{
+        background-size: 100% 110%;
+        
+}
+    100%{
+        background-size: 100% 100%;
+    }
+    
+}
+
+
+
+.navigation {
+    
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: #fff;
+        height: 4.5rem;
+        width: 4.5rem;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(#000, .1);
+        text-align: center;
+        cursor: pointer;
+
+        // @include respond(tab-port) {
+        //     top: 4rem;
+        //     right: 4rem;
+        // }
+
+        // @include respond(phone) {
+        //     top: 3rem;
+        //     right: 3rem;
+        // }
+    }
+
+    &__background {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 1.5rem;
+        right: 3rem;
+        background-image: radial-gradient(rgba($color-primary-light,.9), rgba($color-primary-dark,.9));
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        // @include respond(tab-port) {
+        //     top: 4.5rem;
+        //     right: 4.5rem;
+        // }
+
+        // @include respond(phone) {
+        //     top: 3.5rem;
+        //     right: 3.5rem;
+        // }
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__item {
+        margin: 0.6rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 300;
+            padding: .6rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+            background-size: 220%;
+            transition: all .4s;
+
+            span {
+                margin-right: 1rem;
+                display: inline-block;
+            }
+        }
+        
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-dark;
+            transform: translateX(1rem);
+        }
+    }
+
+
+    //FUNCTIONALITY
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+
+    //ICON
+    &__icon {
+        position: relative;
+        margin-top: 2.2rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: #333;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -.5rem; }
+        &::after { top: .5rem; }
+    }
+
+    &__button:hover &__icon::before {
+        top: -.6rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: .6rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

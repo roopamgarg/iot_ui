@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/map-of-the-world-2401458_1280.jpg) fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/map-of-the-world-2401458_1280.jpg) fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  animation: bg-animate 5s infinite;
+  -webkit-animation: bg-animate 5s infinite;
+}
+
+.header__heading {
+  font-size: 2rem;
+  font-family: 'Luckiest Guy','Times New Roman', Times, serif;
+  text-align: center;
+  background: #fff;
+  border-bottom: 3px solid #0072ff;
+  border-top: 3px solid #0072ff;
+  /*fallbackforoldbrowsers*/
+  /*Chrome10-25,Safari5.1-6*/
+  background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00c6ff));
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+}
+
+.login-box {
+  padding: 4rem 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-box__img {
+  margin: 1rem;
+}
+
+.login-box__input {
+  display: block;
+  width: 15rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: none;
+  padding: 0 0.5rem;
+  -webkit-box-shadow: 0.5rem 1rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.5rem 1rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.login-box__input:focus {
+  border-bottom: 2px solid #00c6ff;
+}
+
+.login-box__btn {
+  background: #00c6ff;
+  /*fallbackforoldbrowsers*/
+  /*Chrome10-25,Safari5.1-6*/
+  background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00c6ff));
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
+  color: #fff;
+  letter-spacing: .1rem;
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  margin-top: 1.5rem;
+  border: none;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+}
+
+.login-box__btn:hover {
+  transform: translateY(-0.2rem);
+  letter-spacing: .2rem;
+  -webkit-box-shadow: 0.5rem 1rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.5rem 1rem 4rem rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-0.2rem);
+  -moz-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  -o-transform: translateY(-0.2rem);
+}
+
+.login-box__btn:active {
+  transform: translateY(0rem);
+  letter-spacing: .2rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(0rem);
+  -moz-transform: translateY(0rem);
+  -ms-transform: translateY(0rem);
+  -o-transform: translateY(0rem);
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+#error {
+  text-align: center;
+  padding: 1rem;
+  color: red;
+}
+
+@-webkit-keyframes bg-animate {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 100% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes bg-animate {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 100% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
