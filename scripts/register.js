@@ -28,7 +28,7 @@ const register = () =>{
             console.log(data);
             if(!data.message){
             
-            window.location.href = "http://127.0.0.1:5500/IOT_health/temperature.html?q="+data.hash;
+            window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?q="+data.hash;
         }
             return data.message;
         })

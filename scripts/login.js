@@ -38,7 +38,7 @@ const login = () =>{
             return data.hash;
         })
         .then((hash)=>{
-         window.location.href = "http://127.0.0.1:5500/IOT_health/temperature.html?id="+hash;
+         window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?id="+hash;
         })
         .catch((err)=>{
             var d1 = document.getElementById('logo');

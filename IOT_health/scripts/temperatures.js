@@ -98,9 +98,9 @@ const getTemperatures = () =>{
 }
 getTemperatures();
 const go_to_temperature_page = () =>{
-    window.location.href = "http://127.0.0.1:5500/IOT_health/temperature.html?id="+hash;
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?id="+hash;
 }
 
 const go_to_body_temperature_page = () =>{
-    window.location.href = "http://127.0.0.1:5500/IOT_health/body_temperature.html?id="+hash;
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/body_temperature.html?id="+hash;
 }
