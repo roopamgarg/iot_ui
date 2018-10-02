@@ -7,11 +7,21 @@ const getUrlVars =()=> {
     }
 
 let pause = false;
+let animation_duration = 0;
+let check_first=0;
 
 const hash = getUrlVars()["id"];
 console.log(hash);
 const generateChart = (dataset=[],labels=[])=>{
     var ctx = document.getElementById("myChart").getContext('2d');
+    if(check_first == 0){
+        check_first = 1;
+        animation_duration = 1000
+
+    }
+    else{
+        animation_duration=0
+    }
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -27,7 +37,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         animation: {
-            duration: 0, // general animation time
+            duration: animation_duration, // general animation time
         },
         // elements: {
         //     line: {

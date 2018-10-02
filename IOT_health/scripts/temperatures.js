@@ -10,6 +10,8 @@ const getUrlVars =()=> {
 let pause = false;
 let animation_duration = 0;
 let check_first=0;
+
+
 const hash = getUrlVars()["id"];
 console.log(hash);
 const generateChart = (dataset=[],labels=[])=>{
