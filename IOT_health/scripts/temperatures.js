@@ -37,7 +37,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         animation: {
-            duration: animation_duration, // general animation time
+            duration:4, // general animation time
         },
         // elements: {
         //     line: {
