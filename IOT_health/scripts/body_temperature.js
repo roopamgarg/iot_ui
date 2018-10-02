@@ -54,7 +54,7 @@ var myChart = new Chart(ctx, {
 }
 
 const getTemperatures = () =>{
-    fetch('http://localhost:8000/body_temperature/'+hash)
+    fetch('https://obscure-shore-41041.herokuapp.com/body_temperature/'+hash)
     .then((response)=>{
         //console.log(response)
         return response.json();

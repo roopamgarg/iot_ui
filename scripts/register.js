@@ -12,7 +12,7 @@ const register = () =>{
     const re_password = document.getElementById("re_password").value;
 
     if(password === re_password){
-        fetch("http://localhost:8000/register",{
+        fetch("https://obscure-shore-41041.herokuapp.com/register",{
             method:"post",
             headers : {'Content-type' : 'application/json'},
             body:JSON.stringify({

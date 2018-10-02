@@ -13,7 +13,7 @@ const login = () =>{
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     
-    fetch("http://localhost:8000/login",{
+    fetch("https://obscure-shore-41041.herokuapp.com/login",{
             method:"post",
             headers : {'Content-type' : 'application/json'},
             body:JSON.stringify({
