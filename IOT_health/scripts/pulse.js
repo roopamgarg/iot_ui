@@ -29,19 +29,19 @@ var myChart = new Chart(ctx, {
         animation: {
             duration: 0, // general animation time
         },
-        elements: {
-            line: {
-                tension: 0, // disables bezier curves
-            }
-        },
+        // elements: {
+        //     line: {
+        //         tension: 0, // disables bezier curves
+        //     }
+        // },
         
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        },
+        // scales: {
+        //     yAxes: [{
+        //         ticks: {
+        //             beginAtZero:true
+        //         }
+        //     }]
+        // },
         tooltips: {
             cornerRadius: 4,
             caretSize: 4,
