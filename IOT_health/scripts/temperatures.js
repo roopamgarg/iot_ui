@@ -16,7 +16,7 @@ const generateChart = (dataset=[],labels=[])=>{
     var ctx = document.getElementById("myChart").getContext('2d');
     if(check_first == 0){
         check_first = 1;
-        animation_duration = 2
+        animation_duration = 1000
 
     }
     else{
@@ -37,7 +37,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         animation: {
-            duration:1000, // general animation time
+            duration:animation_duration, // general animation time
         },
         // elements: {
         //     line: {
