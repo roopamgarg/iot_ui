@@ -107,3 +107,9 @@ const go_to_temperature_page = () =>{
 const go_to_body_temperature_page = () =>{
     window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/body_temperature.html?id="+hash;
 }
+
+
+
+const go_to_pulse_page = () =>{
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/pulse.html?id="+hash;
+}
