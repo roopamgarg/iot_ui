@@ -10,8 +10,8 @@ const register = () =>{
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const re_password = document.getElementById("re_password").value;
-
-    if(password === re_password){
+    const valid_password= password.match(/(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g)
+    if(password === re_password && valid_password){
         fetch("https://obscure-shore-41041.herokuapp.com/register",{
             method:"post",
             headers : {'Content-type' : 'application/json'},
@@ -48,8 +48,15 @@ const register = () =>{
         })
     }
     else{
+        if(!valid_password)
+        {
+            var d1 = document.getElementById('password');
+            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have one special character and should be alphanumeric</div>`);
+        }
+        else{
         var d1 = document.getElementById('re_password');
         d1.insertAdjacentHTML('afterend', `<div id="error">Passwords isn't match</div>`);
+        }
     }
 }
 
