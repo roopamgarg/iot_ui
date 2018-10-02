@@ -5,6 +5,10 @@ const getUrlVars =()=> {
     });
     return vars;
     }
+
+let pause = false;
+
+
 const hash = getUrlVars()["id"];
 console.log(hash);
 const generateChart = (dataset=[],labels=[])=>{
@@ -89,7 +93,14 @@ const getTemperatures = () =>{
         else
             generateChart();
         console.log(res);
-       setTimeout(getTemperatures,4000)
+        if(!pause)
+            setTimeout(getTemperatures,4000)
+        else{
+            while(!pause){
+
+            }
+            setTimeout(getTemperatures,4000)
+        }
        
     })
     .catch((err)=>{
@@ -116,4 +127,11 @@ const go_to_pulse_page = () =>{
 
 const go_to_login_page = () =>{
     window.location.href = "https://roopam527.github.io/iot_ui";
+}
+
+const pause_graph = () =>{
+    if(!pause)
+        pause = true;
+    else
+        pause = false;
 }
