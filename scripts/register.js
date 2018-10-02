@@ -51,7 +51,7 @@ const register = () =>{
         if(!valid_password)
         {
             var d1 = document.getElementById('password');
-            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have <br/> one special character and <br/> should be alphanumeric</div>`);
+            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have: <br/> one special character and <br/> should be alphanumeric</div>`);
         }
         else{
         var d1 = document.getElementById('re_password');
