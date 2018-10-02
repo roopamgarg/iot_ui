@@ -95,7 +95,7 @@ const getTemperatures = () =>{
         if(!pause)
             setTimeout(getTemperatures,4000)
         else{
-            while(!pause){
+            while(pause){
 
             }
             setTimeout(getTemperatures,4000)
