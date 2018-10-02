@@ -94,12 +94,7 @@ const getTemperatures = () =>{
         console.log(res);
         if(!pause)
             setTimeout(getTemperatures,4000)
-        else{
-            while(!pause){
-
-            }
-            setTimeout(getTemperatures,4000)
-        }
+        
        
     })
     .catch((err)=>{
@@ -126,6 +121,10 @@ const go_to_login_page = () =>{
 const pause_graph = () =>{
     if(!pause)
         pause = true;
-    else
+    else{
         pause = false;
+        getTemperatures();
+    }
+
+    console.log(pause)
 }
