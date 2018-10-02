@@ -186,6 +186,7 @@ body {
   background-size: 220%;
   -webkit-transition: all .4s;
   transition: all .4s;
+  letter-spacing: .2rem;
 }
 
 .navigation__link:link span, .navigation__link:visited span {
