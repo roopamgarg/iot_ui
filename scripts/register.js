@@ -44,14 +44,16 @@ const register = () =>{
             
         })
         .catch((err)=>{
-            
+            var d1 = document.getElementById('logo');
+            d1.insertAdjacentHTML('afterend', `<div id="error">Slow Internet Connection</div>`);
+           
         })
     }
     else{
         if(!valid_password)
         {
             var d1 = document.getElementById('password');
-            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have: <br/> one special character and <br/> should be alphanumeric</div>`);
+            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have: <br/> One special character and <br/> Should be alphanumeric</div>`);
         }
         else{
         var d1 = document.getElementById('re_password');
