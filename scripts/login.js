@@ -8,6 +8,12 @@ sessionStorage.setItem("logged_in_user",JSON.stringify(data))
 /// window.location.href = "http://127.0.0.1:5500/IOT_health/index.html";
 }
 
+let error = document.getElementById("error");
+const remove_error = () =>{
+ 
+   error.remove();
+}
+
 
 const login = () =>{
     const email = document.getElementById("email").value;
@@ -31,8 +37,12 @@ const login = () =>{
              
             
             }else{
+                if(error){
+                    remove_error()
+                }
                 var d1 = document.getElementById('password');
                 d1.insertAdjacentHTML('afterend', `<div id="error">Invalid Email or Password</div>`);
+            error = document.getElementById("error");
                
             }
             return data.hash;
@@ -41,8 +51,12 @@ const login = () =>{
          window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?id="+hash;
         })
         .catch((err)=>{
+            if(error){
+                remove_error()
+            }
             var d1 = document.getElementById('logo');
             d1.insertAdjacentHTML('afterend', `<div id="error">Slow Internet Connection</div>`);
+            error = document.getElementById("error");
            
         })
 

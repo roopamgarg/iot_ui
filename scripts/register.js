@@ -5,8 +5,9 @@ sessionStorage.setItem("logged_in_user",JSON.stringify(data))
     console.log(sessionStorage.getItem("logged_in_user"))
 }
 
-const error = document.getElementById("error");
+let error = document.getElementById("error");
 const remove_error = () =>{
+ 
    error.remove();
 }
 
@@ -44,8 +45,10 @@ const register = () =>{
                 if(error){
                     remove_error()
                 }
+
                 var d1 = document.getElementById('email');
             d1.insertAdjacentHTML('afterend', `<div id="error">Ooops! User Already Exist</div>`);
+            error = document.getElementById("error");
             return 0;
             }
             
@@ -57,7 +60,7 @@ const register = () =>{
             }
             var d1 = document.getElementById('logo');
             d1.insertAdjacentHTML('afterend', `<div id="error">Slow Internet Connection</div>`);
-           
+            error = document.getElementById("error");
         })
     }
     else{
@@ -68,12 +71,14 @@ const register = () =>{
         {
             
             var d1 = document.getElementById('password');
-            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have: <br/> One special character and <br/> Should be alphanumeric</div>`);
+            d1.insertAdjacentHTML('afterend', `<div id="error">Password must have : <br/> One special character and <br/> Should be alphanumeric</div>`);
+        
         }
         else{
         var d1 = document.getElementById('re_password');
         d1.insertAdjacentHTML('afterend', `<div id="error">Passwords isn't match</div>`);
         }
+        error = document.getElementById("error");
     }
 }
 
