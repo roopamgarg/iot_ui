@@ -128,4 +128,6 @@ const pause_graph = () =>{
         pause = true;
     else
         pause = false;
+
+    console.log(pause)
 }
