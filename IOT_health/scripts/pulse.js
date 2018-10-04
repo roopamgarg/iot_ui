@@ -45,13 +45,13 @@ var myChart = new Chart(ctx, {
         //     }
         // },
         
-        // scales: {
-        //     yAxes: [{
-        //         ticks: {
-        //             beginAtZero:true
-        //         }
-        //     }]
-        // },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        },
         tooltips: {
             cornerRadius: 4,
             caretSize: 4,
