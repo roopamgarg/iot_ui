@@ -13,14 +13,14 @@ let check_first=0;
 
 const changeTime = (time) =>{
     [hour,minute,sec]=time.split(":");
-    minute = (minutes+30);
+    minute = (minute+30);
     if(minute > 60){
-        minute = minute - 60
-        hour = hour + 1
+        minute = Number(minute) - 60
+        hour = Number(hour) + 1
     }
     hour = hour + 10
     if(hour > 23){
-        hour = hour - 24
+        hour = Number(hour) - 24
     }
     return [hour,minute,sec].join(":")
 }
