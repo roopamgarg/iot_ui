@@ -18,7 +18,7 @@ const changeTime = (time) =>{
         minute = Number(minute) - 60
         hour = Number(hour) + 1
     }
-    hour = hour + 10
+    hour = Number(hour) + 10
     if(hour > 23){
         hour = Number(hour) - 24
     }
