@@ -112,7 +112,7 @@ const getTemperatures = () =>{
 
             document.getElementById("current_temp").innerHTML=res.data[res.data.length-1]+"° C";
             document.getElementById("current_time").innerHTML="at "+labels[labels.length-1];
-            document.getElementById("current_date").innerHTML="on "+res.labels[res.labels.length-1].substring(0,16);
+            document.getElementById("current_date").innerHTML="on "+labels[labels.length-1].substring(0,16);
 
         }
            
