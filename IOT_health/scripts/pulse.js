@@ -110,7 +110,7 @@ const getTemperatures = () =>{
             // document.getElementById("temp_status").innerHTML=temp_status;
 
             document.getElementById("current_temp").innerHTML=res.data[res.data.length-1]+"PRA";
-            document.getElementById("current_time").innerHTML="at "+labels[labels.length-1];
+            document.getElementById("current_time").innerHTML="at "+changeTime(labels[labels.length-1]);
             document.getElementById("current_date").innerHTML="on "+res.labels[res.labels.length-1].substring(0,16);
 
         }

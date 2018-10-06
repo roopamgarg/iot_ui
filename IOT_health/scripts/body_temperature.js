@@ -97,7 +97,7 @@ const getTemperatures = () =>{
             generateChart(res.data,labels);
             
             document.getElementById("current_temp").innerHTML=res.data[res.data.length-1]+"° F";
-            document.getElementById("current_time").innerHTML="at "+labels[labels.length-1];
+            document.getElementById("current_time").innerHTML="at "+changeTime(labels[labels.length-1]);
             document.getElementById("current_date").innerHTML="on "+res.labels[res.labels.length-1].substring(0,16);
 
         }
