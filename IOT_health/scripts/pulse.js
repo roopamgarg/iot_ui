@@ -10,6 +10,22 @@ let pause = false;
 let animation_duration = 0;
 let check_first=0;
 
+
+const changeTime = (time) =>{
+    [hour,minute,sec]=time.split(":");
+    minute = (minutes+30);
+    if(minute > 60){
+        minute = minute - 60
+        hour = hour + 1
+    }
+    hour = hour + 10
+    if(hour > 23){
+        hour = hour - 24
+    }
+    return [hour,minute,sec].join(":")
+}
+
+
 const hash = getUrlVars()["id"];
 console.log(hash);
 const generateChart = (dataset=[],labels=[])=>{
@@ -76,7 +92,7 @@ const getTemperatures = () =>{
         if(res)
         {
             const labels=res.labels.map((index)=>{
-                return index.substring(16,24);
+                return changeTime(index.substring(16,24));
             })
             generateChart(res.data,labels);
             // let temp_status = "normal"

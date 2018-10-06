@@ -11,6 +11,21 @@ let animation_duration = 0;
 let check_first=0;
 
 
+const changeTime = (time) =>{
+    [hour,minute,sec]=time.split(":");
+    minute = (minutes+30);
+    if(minute > 60){
+        minute = minute - 60
+        hour = hour + 1
+    }
+    hour = hour + 10
+    if(hour > 23){
+        hour = hour - 24
+    }
+    return [hour,minute,sec].join(":")
+}
+
+
 const hash = getUrlVars()["id"];
 console.log(hash);
 const generateChart = (dataset=[],labels=[])=>{
@@ -77,23 +92,10 @@ const getTemperatures = () =>{
         if(res)
         {
             const labels=res.labels.map((index)=>{
-                return index.substring(16,24);
+                return changeTime(index.substring(16,24));
             })
             generateChart(res.data,labels);
-            let temp_status = "normal"
-            if(res.data[res.data.length-1]>40){
-                temp_status="Very Hot"
-            }else if(res.data[res.data.length-1]>33){
-                temp_status="Hot"
-            }else if(res.data[res.data.length-1]>23){
-                temp_status="Normal"
-            }else if(res.data[res.data.length-1]>13){
-                temp_status="Cool"
-            }else{
-                temp_status="Cold"
-            }
-            document.getElementById("temp_status").innerHTML=temp_status;
-
+            
             document.getElementById("current_temp").innerHTML=res.data[res.data.length-1]+"° F";
             document.getElementById("current_time").innerHTML="at "+labels[labels.length-1];
             document.getElementById("current_date").innerHTML="on "+res.labels[res.labels.length-1].substring(0,16);
