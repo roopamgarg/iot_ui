@@ -156,15 +156,15 @@ const getTemperatures = () =>{
 }
 
 const go_to_temperature_page = () =>{
-    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html;
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html";
 }
 
 const go_to_body_temperature_page = () =>{
-    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/body_temperature.html;
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/body_temperature.html";
 }
 
 const go_to_pulse_page = () =>{
-    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/pulse.html;
+    window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/pulse.html";
 }
 
 const go_to_login_page = () =>{
