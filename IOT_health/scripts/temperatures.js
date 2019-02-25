@@ -154,7 +154,7 @@ const getTemperatures = () =>{
         console.log(err)
     })
 }
-getTemperatures();
+
 const go_to_temperature_page = () =>{
     window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?id="+hash;
 }
