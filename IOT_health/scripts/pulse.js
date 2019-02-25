@@ -81,6 +81,11 @@ var myChart = new Chart(ctx, {
 });
 
 }
+ generateChart([82,87,83,81,78],["1/2/2019","1/2/2019","2/2/2019","2/2/2019","3/2/2019"]);
+            
+            document.getElementById("current_temp").innerHTML=91.2+"BPM";
+            document.getElementById("current_time").innerHTML="at "+"4:00pm";
+            document.getElementById("current_date").innerHTML="on "+"3/2/2019";
 
 const getTemperatures = () =>{
     fetch('https://obscure-shore-41041.herokuapp.com/pulse/'+hash)
@@ -127,7 +132,7 @@ const getTemperatures = () =>{
         console.log(err)
     })
 }
-getTemperatures();
+
 const go_to_temperature_page = () =>{
     window.location.href = "https://roopam527.github.io/iot_ui/IOT_health/temperature.html?id="+hash;
 }
