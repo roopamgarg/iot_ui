@@ -81,7 +81,7 @@ var myChart = new Chart(ctx, {
 });
 
 }
- generateChart([90.2,90.1,90.3,90.3,91.2],["1/2/2019","1/2/2019","2/2/2019","3/2/2019]);
+ generateChart([90.2,90.1,90.3,90.3,91.2],["1/2/2019","1/2/2019","2/2/2019","3/2/2019"]);
             
             document.getElementById("current_temp").innerHTML=91.2+"° F";
             document.getElementById("current_time").innerHTML="at "+"4:00pm";
