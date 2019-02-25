@@ -82,6 +82,27 @@ var myChart = new Chart(ctx, {
 });
 
 }
+const tempdata = [30.2,32.0,35.1,30.8,33.0]
+  generateChart(tempdata,["1/2/2019","2/2/2019","3/2/2019","4/2/2019","5/2/2019");
+            let temp_status = "normal"
+//             if(res.data[res.data.length-1]>40){
+//                 temp_status="Very Hot"
+//             }else if(res.data[res.data.length-1]>33){
+//                 temp_status="Hot"
+//             }else if(res.data[res.data.length-1]>23){
+//                 temp_status="Normal"
+//             }else if(res.data[res.data.length-1]>13){
+//                 temp_status="Cool"
+//             }else{
+//                 temp_status="Cold"
+//             }
+            document.getElementById("temp_status").innerHTML=temp_status;
+
+            document.getElementById("current_temp").innerHTML=33.0+"° C";
+            document.getElementById("current_time").innerHTML="at "+"9:00am";
+            document.getElementById("current_date").innerHTML="on "+"5/2/2019");
+
+
 
 const getTemperatures = () =>{
     fetch('https://obscure-shore-41041.herokuapp.com/temperature/'+hash)
