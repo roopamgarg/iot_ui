@@ -83,7 +83,7 @@ var myChart = new Chart(ctx, {
 
 }
 const tempdata = [30.2,32.0,35.1,30.8,33.0]
-  generateChart(tempdata,["1/2/2019","2/2/2019","3/2/2019","4/2/2019","5/2/2019");
+  generateChart(tempdata,["1/2/2019","2/2/2019","3/2/2019","4/2/2019","5/2/2019"]);
             let temp_status = "normal"
 //             if(res.data[res.data.length-1]>40){
 //                 temp_status="Very Hot"
