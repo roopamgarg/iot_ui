@@ -100,7 +100,7 @@ const tempdata = [30.2,32.0,35.1,30.8,33.0]
 
             document.getElementById("current_temp").innerHTML=33.0+"° C";
             document.getElementById("current_time").innerHTML="at "+"9:00am";
-            document.getElementById("current_date").innerHTML="on "+"5/2/2019");
+            document.getElementById("current_date").innerHTML="on "+"5/2/2019";
 
 
 
