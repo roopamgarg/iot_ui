@@ -81,6 +81,12 @@ var myChart = new Chart(ctx, {
 });
 
 }
+ generateChart([90.2,90.1,90.3,90.3,91.2],["1/2/2019","1/2/2019","2/2/2019","3/2/2019]);
+            
+            document.getElementById("current_temp").innerHTML=91.2+"° F";
+            document.getElementById("current_time").innerHTML="at "+"4:00pm";
+            document.getElementById("current_date").innerHTML="on "+"3/2/2019";
+
 
 const getTemperatures = () =>{
     fetch('https://obscure-shore-41041.herokuapp.com/body_temperature/'+hash)
@@ -94,12 +100,7 @@ const getTemperatures = () =>{
             const labels=res.labels.map((index)=>{
                 return changeTime(index.substring(16,24));
             })
-            generateChart(res.data,labels);
-            
-            document.getElementById("current_temp").innerHTML=res.data[res.data.length-1]+"° F";
-            document.getElementById("current_time").innerHTML="at "+changeTime(labels[labels.length-1]);
-            document.getElementById("current_date").innerHTML="on "+res.labels[res.labels.length-1].substring(0,16);
-
+           
         }
            
         else
@@ -114,7 +115,7 @@ const getTemperatures = () =>{
         console.log(err)
     })
 }
-getTemperatures();
+
 
 
 
